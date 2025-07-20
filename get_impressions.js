@@ -42,8 +42,15 @@ async function saveRepliedTweetToGoogle(tweetId, text, mediaUrls = []) {
 async function fetchTweets(handle, limit = 5) {
   const url = `https://x.com/${handle.replace('@', '')}`;
   let browser;
+ try {
+    const chromePath = '/opt/render/.cache/puppeteer/chrome/linux-138.0.7204.157/chrome-linux64/chrome';
+    const browser = await puppeteer.launch({
+      executablePath: chromePath,
+      headless: true,
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    });
 
-  try {
+
    browser = await puppeteer.launch({
   executablePath: puppeteer.executablePath(), // <- use downloaded Chrome
   headless: true,
