@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "get_impressions.js",
   "scripts": {
-    "postinstall": "puppeteer install",
-    "start": "node get_impressions.js"
+   "postinstall": "npx puppeteer browsers install chrome",
+  "start": "node get_impressions.js"
   },
   "keywords": [],
   "author": "",
