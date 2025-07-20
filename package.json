@@ -10,9 +10,13 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@google/genai": "^1.10.0",
+    "axios": "^1.10.0",
+    "cheerio": "^1.1.0",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "node-cron": "^4.1.1",
+    "puppeteer": "^24.14.0",
     "twitter-api-v2": "^1.23.2"
   }
 }
